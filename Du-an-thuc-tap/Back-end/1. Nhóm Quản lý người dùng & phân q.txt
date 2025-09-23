@@ -1,0 +1,67 @@
+1. Nhóm Quản lý người dùng & phân quyền
+
+users → thông tin tài khoản người dùng (username, email, password, profile, …)
+
+roles → vai trò (admin, seller, customer, shipper, …)
+
+permissions → quyền chi tiết (quản lý đơn hàng, quản lý sản phẩm, …)
+
+role_permissions → bảng trung gian role ↔ permission
+
+user_roles → bảng trung gian user ↔ role
+
+🔹 2. Nhóm Sản phẩm & danh mục
+
+products → thông tin sản phẩm (tên, mô tả, giá, tồn kho, trạng thái, …)
+
+categories → danh mục (Áo, Quần, Điện thoại, …)
+
+product_categories → bảng trung gian product ↔ category
+
+product_images → ảnh sản phẩm
+
+brands (tùy chọn) → thương hiệu
+
+attributes → thuộc tính (màu, size, dung lượng, …)
+
+product_attributes → giá trị thuộc tính cho từng sản phẩm
+
+🔹 3. Nhóm Giỏ hàng & đơn hàng
+
+carts → giỏ hàng (theo user, session)
+
+cart_items → sản phẩm trong giỏ
+
+orders → đơn hàng (trạng thái: pending, paid, shipped, completed, canceled)
+
+order_items → chi tiết sản phẩm trong đơn hàng
+
+shipping_addresses → địa chỉ giao hàng của user
+
+payments → thông tin thanh toán (mã giao dịch, trạng thái, cổng thanh toán: VNPay, PayPal, COD, …)
+
+🔹 4. Nhóm Khuyến mãi & marketing
+
+coupons → mã giảm giá
+
+discounts → chương trình khuyến mãi (theo sản phẩm, theo đơn hàng)
+
+product_discounts → áp dụng giảm giá cho sản phẩm nào
+
+🔹 5. Nhóm Hỗ trợ & phản hồi
+
+reviews → đánh giá sản phẩm (rating, comment, user_id, product_id)
+
+review_images (nếu có)
+
+wishlists → danh sách yêu thích của người dùng
+
+tickets / support → hỗ trợ khách hàng (nếu có chat CSKH)
+
+🔹 6. Nhóm Quản trị hệ thống
+
+logs → lưu lịch sử hành động (audit log)
+
+notifications → thông báo cho user (đơn hàng, khuyến mãi, hệ thống, …)
+
+settings → cấu hình website (logo, banner, hotline, …)
